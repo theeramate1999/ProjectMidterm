@@ -1,5 +1,7 @@
 extends Node
 
+var Image_text = {}
+var Image_image ={}
 func _ready():
 	pass # Replace with function body.
 

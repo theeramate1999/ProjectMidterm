@@ -1,34 +1,115 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Image/Mainmenu.png" type="Texture" id=1]
 [ext_resource path="res://script/Mainmenu.gd" type="Script" id=2]
 [ext_resource path="res://Image/StartBotton.png" type="Texture" id=3]
+[ext_resource path="res://font/Mali-Bold.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 36
+font_data = ExtResource( 4 )
 
 [node name="Mainmenu" type="Node2D"]
 script = ExtResource( 2 )
 __meta__ = {
-"_edit_vertical_guides_": [ 412.103 ]
+"_edit_vertical_guides_": [ 412.103, 1393.17, 1031.15 ]
 }
 
-[node name="TextureRect" type="TextureRect" parent="."]
-margin_left = 1.8562
-margin_top = 4.02673
-margin_right = 1921.86
-margin_bottom = 1084.03
+[node name="Bg" type="TextureRect" parent="."]
+margin_left = -4.28198
+margin_top = -0.902957
+margin_right = 1915.72
+margin_bottom = 1079.1
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="."]
-margin_left = 179.98
-margin_top = 405.071
-margin_right = 643.98
-margin_bottom = 561.071
+[node name="StartButton" type="Button" parent="."]
+margin_left = 182.808
+margin_top = 445.116
+margin_right = 646.808
+margin_bottom = 601.116
+toggle_mode = true
+pressed = true
+keep_pressed_outside = true
 text = "เริ่มเกม"
 icon = ExtResource( 3 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+
+[node name="Name" type="RichTextLabel" parent="."]
+margin_left = 1268.05
+margin_top = 206.596
+margin_right = 1753.05
+margin_bottom = 263.596
+custom_fonts/normal_font = SubResource( 1 )
+text = "Name: Child Test
+"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Age" type="RichTextLabel" parent="."]
+margin_left = 1269.71
+margin_top = 278.621
+margin_right = 1428.71
+margin_bottom = 335.621
+custom_fonts/normal_font = SubResource( 1 )
+text = "Age: 99"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Gender" type="RichTextLabel" parent="."]
+margin_left = 1269.88
+margin_top = 343.0
+margin_right = 1670.88
+margin_bottom = 400.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Gender:Male"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score1" type="RichTextLabel" parent="."]
+margin_left = 1019.78
+margin_top = 468.357
+margin_right = 1744.78
+margin_bottom = 563.357
+custom_fonts/normal_font = SubResource( 1 )
+text = "ScoreMode1: 10.00  s"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score2" type="RichTextLabel" parent="."]
+margin_left = 1020.0
+margin_top = 530.0
+margin_right = 1745.0
+margin_bottom = 586.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "ScoreMode2: 10.00  s"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score3" type="RichTextLabel" parent="."]
+margin_left = 1019.25
+margin_top = 587.017
+margin_right = 1744.25
+margin_bottom = 682.017
+custom_fonts/normal_font = SubResource( 1 )
+text = "ScoreMode3: 10.00  s"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
