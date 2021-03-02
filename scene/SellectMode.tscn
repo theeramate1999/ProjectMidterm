@@ -15,9 +15,9 @@ __meta__ = {
 }
 
 [node name="image2text" type="Button" parent="."]
-margin_left = 30.0
+margin_left = 38.4756
 margin_top = 28.0
-margin_right = 924.0
+margin_right = 932.476
 margin_bottom = 510.0
 flat = true
 __meta__ = {
@@ -45,9 +45,9 @@ __meta__ = {
 }
 
 [node name="back2menu" type="Button" parent="."]
-margin_left = 989.873
+margin_left = 985.635
 margin_top = 570.445
-margin_right = 1883.87
+margin_right = 1879.63
 margin_bottom = 1052.45
 flat = true
 __meta__ = {
